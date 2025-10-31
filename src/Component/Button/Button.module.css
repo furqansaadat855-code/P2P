@@ -1,0 +1,15 @@
+.cta {
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: white;
+  padding: 9px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0, 104, 208, 0.12);
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.cta:hover {
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+}

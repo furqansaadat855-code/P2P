@@ -1,0 +1,327 @@
+.footer {
+	background: var(--bg);
+	color: #0b1220;
+	border-top: 1px solid rgba(11, 17, 32, 0.06);
+	padding: 48px 20px;
+	box-sizing: border-box;
+}
+
+/* TOP */
+.top {
+	max-width: 1200px;
+	margin: 0 auto 28px auto;
+	display: flex;
+	gap: 40px;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap; /* allow wrapping on narrow screens */
+	box-sizing: border-box;
+}
+
+/* Brand column */
+.brandCol {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 25%;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-decoration: none;
+	color: inherit;
+}
+.logo svg {
+	width: 72px; /* slightly smaller by default */
+	height: 72px;
+}
+.brand {
+	font-weight: 800;
+	font-size: 18px;
+	color: var(--primary);
+}
+.tagline {
+	margin: 0;
+	color: var(--muted);
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* Link columns: responsive grid-like flex */
+.linkCols {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	flex-wrap: wrap; /* wrap to multiple lines on narrow screens */
+	box-sizing: border-box;
+	width: 30%;
+}
+.linkCols .col {
+	flex: 0 1 160px;
+	min-width: 140px;
+}
+.linkCols .col h4 {
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0 0 10px 0;
+	color: var(--primary);
+}
+.col ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.linkCols .col a {
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+	color: var(--text);
+}
+.col a:hover {
+	color: var(--primary);
+}
+
+/* Contact column */
+.contactCol {
+	width: 22%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.contactCol h4 {
+	margin: 0 0 10px 0;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--primary);
+}
+.contactInfo {
+	font-style: normal;
+	color: var(--muted);
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+.socials {
+	margin-top: 12px;
+	display: flex;
+	gap: 10px;
+}
+.socials a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 8px;
+	background: linear-gradient(90deg, var(--light), #fff);
+	color: var(--primary);
+	text-decoration: none;
+	font-weight: 700;
+}
+
+/* BOTTOM */
+.bottom {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	align-items: center;
+	padding-top: 18px;
+	border-top: 1px solid rgba(11, 17, 32, 0.04);
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+
+.newsletter {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	width: 70%;
+}
+.newsletter h4 {
+	margin: 0 10px 0 0;
+	color: var(--primary);
+	font-size: 16px;
+}
+.form {
+	display: flex;
+	gap: 8px;
+	flex: 1 1 320px;
+}
+.form input {
+	padding: 10px 12px;
+	border-radius: 8px;
+	border: 1px solid rgba(11, 17, 32, 0.06);
+	min-width: 220px;
+	flex: 1 1 auto;
+	box-sizing: border-box;
+}
+.form button {
+	padding: 10px 14px;
+	border-radius: 8px;
+	border: 0;
+	background: linear-gradient(90deg, var(--primary), var(--accent));
+	color: white;
+	font-weight: 700;
+	cursor: pointer;
+	flex: 0 0 auto;
+}
+
+/* Legal / copy */
+.legal {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 8px;
+}
+.privacyLinks {
+	display: flex;
+	gap: 12px;
+}
+.privacyLinks a {
+	text-decoration: none;
+	color: var(--muted);
+	font-weight: 600;
+}
+.copy {
+	color: var(--muted);
+	font-size: 13px;
+}
+
+/* small tweaks */
+.logo svg {
+	max-width: 100%;
+	height: auto;
+}
+.brandCol .tagline {
+	opacity: 0.95;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+	.linkCols {
+		width: 40%;
+		gap: 0px;
+	}
+}
+@media (max-width: 900px) {
+	.top {
+		gap: 24px;
+	}
+	.brandCol {
+		gap: 12px;
+		width: 33%;
+	}
+	/* reorder for natural stacking: brand, links, contact */
+	.brandCol {
+		order: 1;
+		gap: 12px;
+		width: 33%;
+	}
+	.linkCols {
+		order: 2;
+		width: 20%;
+		justify-content: flex-start;
+	}
+	.contactCol {
+		order: 3;
+		width: 36%;
+	}
+
+	.linkCols {
+		gap: 10px;
+	}
+	.linkCols .col {
+		flex: 1 1 45%;
+		min-width: 160px;
+	}
+	.newsletter {
+		width: 100%;
+	}
+	.bottom {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.legal {
+		align-items: center;
+		order: 3;
+	}
+	.footer {
+		padding: 48px 20px 10px;
+	}
+	.newsletter {
+		order: 1;
+	}
+	.form input {
+		min-width: 150px;
+		width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+	.top {
+		gap: 18px;
+	}
+	.brandCol {
+		flex-basis: 100%;
+		min-width: 100%;
+	}
+	.linkCols {
+		flex-basis: 100%;
+	}
+	.linkCols .col {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+	.contactCol {
+		flex-basis: 100%;
+	}
+
+	.logo svg {
+		width: 60px;
+		height: 60px;
+	}
+	.brand {
+		font-size: 16px;
+	}
+	.tagline {
+		font-size: 13px;
+	}
+
+	.newsletter h4 {
+		font-size: 14px;
+		margin-bottom: 6px;
+		display: block;
+	}
+	.newsletter {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.form {
+		width: 100%;
+	}
+.form {
+    flex: unset;
+}
+}
+
+@media (max-width: 420px) {
+	.footer {
+		padding: 28px 12px;
+	}
+	.form {
+		flex-direction: column;
+	}
+	.form button {
+		width: 100%;
+	}
+	.legal {
+		align-items: flex-start;
+	}
+}

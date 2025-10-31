@@ -1,0 +1,139 @@
+.section {
+	padding: 100px 0;
+	background: color-mix(in srgb, var(--accent) 100%, transparent);
+}
+
+.inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 36px;
+	padding: 0 20px;
+}
+
+.header {
+	text-align: center;
+	max-width: 860px;
+}
+
+.heading {
+	font-size: 45px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--text);
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+.subwrap {
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+}
+
+.subline {
+	font-size: 24px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: var(--text);
+}
+
+.grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	max-width: 1200px;
+}
+
+.card {
+	background: var(--white);
+	border-radius: 8px;
+	padding: 50px;
+	box-shadow: 0 10px 30px rgba(11, 16, 36, 0.06);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	min-height: 260px;
+}
+
+.iconWrap {
+	width: 56px;
+	height: 56px;
+	border-radius: 12px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary);
+	background: rgba(59, 39, 161, 0.06);
+}
+
+.cardTitle {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 600;
+	color: var(--text);
+}
+
+.cardText {
+	font-size: 15px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: var(--text);
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	margin: 0;
+}
+
+.cardLink {
+	margin-top: auto;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--primary);
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.cardLink svg {
+	color: var(--primary);
+}
+@media screen and (max-width: 1200px) {
+	.section {
+		padding: 60px 0;
+	}
+	.heading {
+		font-size: 40px;
+	}
+.subline {
+    font-size: 20px;
+}
+.card {
+    padding: 40px 30px;
+}
+}
+@media (max-width: 980px) {
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+    .section {
+        padding: 50px 0;
+    }
+    .heading {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.inner {
+		padding: 0 12px;
+	}
+    .heading {
+        font-size: 31px;
+    }
+}

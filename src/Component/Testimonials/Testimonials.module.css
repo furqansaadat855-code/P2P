@@ -1,0 +1,222 @@
+.section {
+	padding: 72px 0;
+	background: #fafafa;
+}
+
+.inner {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	padding: 0 20px;
+}
+
+.header {
+	text-align: center;
+}
+
+.eyebrow {
+	font-size: 14px;
+	color: var(--primary);
+	margin-bottom: 15px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.title {
+	font-size: 45px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--text);
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+.description {
+	margin: 0 auto;
+	font-size: 22px;
+	line-height: 1.5;
+	font-weight: 500;
+	color: var(--text);
+	max-width: 720px;
+}
+
+.grid {
+	width: 100%;
+	display: grid;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.card {
+	position: relative;
+	background: var(--white);
+	padding: 28px;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(11, 16, 36, 0.06);
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	min-height: 200px;
+}
+
+.quoteMark {
+	font-size: 48px;
+	color: var(--accent);
+	line-height: 1;
+	opacity: 0.9;
+}
+
+.quote {
+	margin: 0;
+	color: rgba(15, 23, 36, 0.9);
+	font-size: 16px;
+	line-height: 1.6;
+	flex: 1 1 auto;
+	min-height: 160px;
+}
+
+.meta {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.avatar {
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	overflow: hidden;
+	flex: 0 0 52px;
+}
+
+.avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.placeholder {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180deg, var(--primary), var(--accent));
+	color: var(--white);
+	font-weight: 700;
+}
+
+.person {
+}
+
+.name {
+	font-weight: 700;
+	color: var(--text);
+}
+
+.role {
+	color: rgba(15, 23, 36, 0.55);
+	font-size: 13px;
+}
+/* slick overrides to match your color scheme */
+.sliderWrap {
+	width: 100%;
+	margin-top: 18px;
+}
+
+/* ensure slider items use module card spacing */
+.slider :global(.slick-slide) {
+	display: flex;
+	justify-content: center;
+	padding: 0 12px;
+	box-sizing: border-box;
+}
+
+/* center the track */
+.slider :global(.slick-list) {
+	padding: 0 12px;
+}
+
+/* dot styles */
+:global(.slick-dots) {
+	margin-top: 20px;
+	display: flex !important;
+	justify-content: center;
+	padding: 0;
+}
+:global(.slick-dots li button:before) {
+	font-size: 10px;
+	color: rgba(15, 23, 36, 0.25);
+	opacity: 1;
+}
+:global(.slick-dots li.slick-active button:before) {
+	color: var(--primary);
+}
+
+/* arrows */
+:global(.slick-prev),
+:global(.slick-next) {
+	width: 44px;
+	height: 44px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.95);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary);
+	box-shadow: 0 6px 20px rgba(11, 16, 36, 0.08);
+}
+:global(.slick-prev:hover),
+:global(.slick-next:hover) {
+	transform: translateY(-2px);
+}
+:global(.slick-prev:before),
+:global(.slick-next:before) {
+	display: none; /* hide default arrow glyphs so we can use our own */
+}
+
+/* position arrows a little inward */
+:global(.slick-prev) {
+	left: -10px;
+	z-index: 5;
+}
+:global(.slick-next) {
+	right: -10px;
+	z-index: 5;
+}
+
+/* small responsive tweak so arrows don't overflow on small screens */
+@media (max-width: 700px) {
+	:global(.slick-prev),
+	:global(.slick-next) {
+		display: none;
+	}
+	.slider :global(.slick-slide) {
+		padding: 0 8px;
+	}
+}
+@media (max-width: 980px) {
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.title {
+		font-size: 35px;
+	}
+	.section {
+		padding: 50px 0 70px;
+	}
+}
+
+@media (max-width: 600px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.section {
+		padding: 48px 0;
+	}
+	.title {
+		font-size: 24px;
+	}
+}

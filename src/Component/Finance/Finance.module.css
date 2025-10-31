@@ -1,0 +1,184 @@
+.section {
+	padding: 100px 0;
+	display: grid;
+}
+
+.wrap {
+	display: flex;
+	gap: 100px;
+	justify-content: space-between;
+	align-items: center;
+}
+.rev {
+	flex-direction: row-reverse;
+}
+.list {
+	margin-bottom: 20px;
+}
+.point {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: 5px;
+}
+.left {
+	width: 50%;
+}
+.right {
+	width: 40%;
+}
+
+.check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	color: var(--primary);
+	flex: 0 0 34px;
+}
+.eyebrow h6 {
+	font-size: 14px;
+	color: var(--primary);
+	margin-bottom: 15px;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+.title {
+	font-size: 45px;
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--text);
+	margin-bottom: 20px;
+}
+.desc {
+	font-size: 18px;
+	line-height: 1.4;
+	font-weight: 500;
+	color: var(--text);
+	margin-bottom: 20px;
+}
+.pointText {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.6;
+	color: var(--text);
+}
+
+.actions {
+}
+
+.cta {
+	background: linear-gradient(90deg, var(--primary), var(--accent));
+	color: var(--white);
+	padding: 12px 22px;
+	border-radius: 10px;
+	border: none;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 0 10px 28px rgba(59, 39, 161, 0.14);
+}
+
+.imageWrap {
+	position: relative;
+	max-width: 100%;
+	box-shadow: 0 18px 40px rgba(11, 16, 36, 0.08);
+	background-color: var(--accent);
+}
+.imageWrap::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-color: var(--accent);
+	transform: skewX(-5deg);
+}
+.image {
+	width: 100%;
+	height: 550px;
+	object-fit: cover;
+	display: block;
+	border-radius: 4px;
+}
+
+.badge {
+	position: absolute;
+	right: -20px;
+	bottom: 18px;
+	background: linear-gradient(90deg, var(--primary), var(--accent));
+	color: var(--white);
+	padding: 14px 18px;
+	border-radius: 6px;
+	transform: rotate(-4deg);
+	box-shadow: 0 10px 30px rgba(59, 39, 161, 0.18);
+}
+
+.badgeNumber {
+	font-weight: 800;
+	font-size: 28px;
+}
+
+.badgeText {
+	font-size: 12px;
+	opacity: 0.95;
+}
+@media screen and (max-width: 1200px) {
+	.section {
+		padding: 80px 0px;
+	}
+    .right {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 1024px) {
+	.title {
+		font-size: 40px;
+	}
+	.pointText {
+		font-size: 15px;
+	}
+	.check {
+		flex: 0 0 25px;
+	}
+	.check svg {
+		width: 20px;
+	}
+	.wrap {
+		gap: 30px;
+	}
+	.right {
+		width: 45%;
+	}
+}
+@media (max-width: 980px) {
+	.wrap {
+		flex-direction: column;
+		gap: 28px;
+	}
+	.left {
+		width: 100%;
+	}
+	.right {
+		width: 100%;
+	}
+	.imageWrap {
+		width: 100%;
+	}
+	.list {
+		grid-template-columns: 1fr;
+	}
+    .section {
+        padding: 50px 0px;
+    }
+}
+@media (max-width: 575px) {
+	    .title {
+        font-size: 30px;
+    }
+	.desc {
+    font-size: 16px;
+}
+}
